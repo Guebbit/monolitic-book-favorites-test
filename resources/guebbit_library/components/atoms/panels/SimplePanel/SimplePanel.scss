@@ -1,0 +1,7 @@
+@use "../../../../vars" as vars;
+@use "@guebbit/css-ui/src/atoms/panels/SimplePanel" with (
+    $css-ui-dark-theme-class: vars.$css-ui-dark-theme-class,
+    $css-ui-var-prefix: vars.$css-ui-var-prefix,
+    $css-ui-class-prefix: vars.$css-ui-class-prefix,
+    $css-ui-root-prefix: vars.$css-ui-root-prefix
+);

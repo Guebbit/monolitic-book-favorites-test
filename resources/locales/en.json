@@ -1,0 +1,48 @@
+{
+    "website": {
+        "title": "Dream Books"
+    },
+    "generic": {
+        "increment": "increment | increments",
+        "count": "count | counts",
+        "user": "user | users",
+        "book": "book | books",
+        "list": "list | lists",
+        "loading": "loading {load}",
+        "not-found": "results not found",
+        "it": "italian",
+        "en": "english",
+        "login": "login",
+        "logout": "logout",
+        "register": "register",
+        "search": "search {field}",
+        "reset": "reset",
+        "more-info": "More info",
+        "field-is-required": "{field} field is required"
+    },
+    "navigation": {
+        "home-label": "Home",
+        "books-label": "Books",
+        "profile-label": "Profile",
+        "admin-users-label": "Users administration",
+        "user-list-label": "Go to user list",
+        "book-list-label": "Go to book list"
+    },
+    "page-list-users": {
+        "user": "@:generic.user",
+        "button-go-to-details": "User page",
+        "button-go-to-list": "User list",
+        "button-edit": "Edit user",
+        "button-delete": "Remove user"
+    },
+    "page-list-books": {
+        "book": "@:generic.book",
+        "filter-label-genre": "Filter by genre",
+        "add-to-favorites": "Add to favorites",
+        "remove-from-favorites": "Remove from favorites",
+        "button-go-to-details": "Book details",
+        "button-go-to-list": "Book list",
+        "button-edit": "Edit book",
+        "button-delete": "Remove book"
+    }
+}

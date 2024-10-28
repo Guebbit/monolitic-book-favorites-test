@@ -1,0 +1,105 @@
+@use "@guebbit/css-toolkit" as guebbit;
+@use "../colors" as color;
+@use "../variables" as vars;
+
+/**
+ * Install the theme
+ */
+@use "@guebbit/css-ui/src/theme" as theme with (
+  $css-ui-dark-theme-class: vars.$css-ui-dark-theme-class,
+  $css-ui-var-prefix: vars.$css-ui-var-prefix,
+  $css-ui-root-prefix: vars.$css-ui-root-prefix,
+  $color: vars.$primary-color,
+  $color--dark: vars.$primary-color--dark,
+  $active-color: vars.$secondary-color,
+  $active-color--dark: vars.$secondary-color--dark,
+);
+
+/**
+ * Implement theme (insert in the css)
+ */
+:root {
+    @include theme.theme-generic;
+    @include theme.theme-dark-builder;
+}
+
+.#{theme.$css-ui-dark-theme-class} {
+    :root {
+        @include theme.theme-dark-builder;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include theme.theme-dark-builder;
+    }
+}
+
+
+/**
+ * Default theme
+ */
+:root {
+
+    /**
+     * Overrides
+     */
+    --on-secondary-600: #fff !important;
+
+    /**
+     * Generic variables
+     */
+    --g-padding: #{vars.$g-padding};
+    --transitions-time: #{vars.$g-transitions-time};
+    --nav-height: #{vars.$g-nav-height};
+
+    /**
+     * CSS Theme (semantic color variables for this project)
+     */
+    --body-background-color: rgb(var(--core-white));
+    --body-text-color: rgb(var(--grey-900));
+
+    --title-border-color: rgb(var(--primary-500));
+
+    // theme anchors
+    --anchor-text-color: rgb(var(--primary-500));
+    --anchor-background-color: transparent;
+    --anchor-text-active-color: rgb(var(--on-secondary-600));
+    --anchor-background-active-color: rgb(var(--secondary-600));
+
+    // theme buttons
+    --button-text-color: rgb(var(--on-primary-500));
+    --button-background-color: rgb(var(--primary-500));
+    --button-text-active-color: rgb(var(--on-secondary-500));
+    --button-background-active-color: rgb(var(--secondary-500));
+
+    // theme inputs
+    --input-text-color: rgb(var(--on-primary-500));
+    --input-background-color: #{rgba(color.get-theme-color("primary", "500"), 0.1)};
+    --input-border-color: rgb(var(--primary-500));
+    --input-background-active-color: #{rgba(color.get-theme-color("secondary", "500"), 0.1)};
+    --input-text-active-color: rgb(var(--on-secondary-500));
+    --input-border-active-color: rgb(var(--secondary-500));
+
+    // theme cards
+    --select-text-color: rgb(var(--on-primary-500));
+    --select-background-color: rgb(var(--primary-500));
+    --select-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --select-icon-background: rgb(var(--primary-700));
+
+    // theme cards
+    --card-text-color: rgb(var(--on-primary-500));
+    --card-background-color: rgb(var(--primary-700));
+    --card-text-active-color: rgb(var(--on-secondary-700));
+    --card-background-active-color: rgb(var(--secondary-700));
+}
+
+/**
+ * Dark Theme (changes from default variables)
+ */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-background-color: rgb(var(--grey-900));
+        --body-text-color: rgb(var(--core-white));
+    }
+}

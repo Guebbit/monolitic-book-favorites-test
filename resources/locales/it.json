@@ -1,0 +1,48 @@
+{
+    "website": {
+        "title": "Libri da sogno"
+    },
+    "generic": {
+        "increment": "incremento | incrementi",
+        "count": "conto | conti",
+        "user": "utente | utenti",
+        "book": "libro | libri",
+        "list": "lista | liste",
+        "loading": "caricamento {load}",
+        "not-found": "nessun risultato trovato",
+        "it": "italiano",
+        "en": "inglese",
+        "login": "login",
+        "logout": "logout",
+        "register": "register",
+        "search": "cerca {field}",
+        "reset": "reset",
+        "more-info": "Altre informazioni",
+        "field-is-required": "{field} campo obbligatorio"
+    },
+    "navigation": {
+        "home-label": "Home",
+        "books-label": "Libri",
+        "profile-label": "Profilo",
+        "admin-users-label": "Amministrazione utenti",
+        "user-list-label": "Vai alla lista utenti",
+        "book-list-label": "Vai alla lista libri"
+    },
+    "page-list-users": {
+        "user": "@:generic.user",
+        "button-go-to-details": "Pagina utente",
+        "button-go-to-list": "Lista utenti",
+        "button-edit": "Modifica utente",
+        "button-delete": "Rimuovi utente"
+    },
+    "page-list-books": {
+        "book": "@:generic.book",
+        "filter-label-genre": "Filtro per genere",
+        "add-to-favorites": "Aggiungi ai preferiti",
+        "remove-from-favorites": "Rimuovi dai preferiti",
+        "button-go-to-details": "Dettagli libro",
+        "button-go-to-list": "Lista libri",
+        "button-edit": "Modifica libro",
+        "button-delete": "Rimuovi libro"
+    }
+}
